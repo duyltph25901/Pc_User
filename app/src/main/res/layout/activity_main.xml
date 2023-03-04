@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="#1F2027">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieSplash"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        app:lottie_rawRes="@raw/splash"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <LinearLayout
+        android:id="@+id/layoutNameShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtShopName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BeeShop"
+            android:textSize="@dimen/_34ssp"
+            android:textStyle="bold"
+            android:textColor="#ff00"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mua hết ở Bee shop"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="italic"
+            android:gravity="center_horizontal"
+            android:textColor="#EEEEEE"/>
+    </LinearLayout>
+
+</LinearLayout>

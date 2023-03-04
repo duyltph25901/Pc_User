@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerProduct"
+    app:cardCornerRadius="@dimen/_12sdp"
+    android:layout_marginBottom="@dimen/_12sdp">
+
+    <View
+        android:id="@+id/viewSuporter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@id/imgProduct"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/viewActorItem"
+        android:background="@drawable/bg_products"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtProductName"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/imgProduct"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="15dp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProductName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgProduct"
+        app:layout_constraintTop_toTopOf="@id/imgProduct"
+        android:textSize="@dimen/_18ssp"
+        android:text="Product name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPriceProduct"
+        android:text="Price"
+        android:textSize="18sp"
+        android:textColor="#DDDDDD"
+        app:layout_constraintStart_toStartOf="@id/txtProductName"
+        app:layout_constraintTop_toBottomOf="@id/txtProductName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textStyle="italic"
+        app:layout_constraintTop_toTopOf="@id/txtPriceProduct"
+        app:layout_constraintBottom_toBottomOf="@id/txtPriceProduct"
+        app:layout_constraintStart_toEndOf="@id/txtPriceProduct"
+        android:textSize="18sp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:textColor="#DDDDDD"/>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/txtPriceProduct"
+        app:layout_constraintTop_toBottomOf="@id/txtPriceProduct"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/textViewShowDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xem chi tiết"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/white"
+            android:textStyle="italic"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:background="@color/white"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.OrderInfoFragment"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_12sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin đơn hàng"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_12sdp"/>
+    <TextView
+        android:id="@+id/textCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đặt hàng lúc: "
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"/>
+    <TextView
+        android:id="@+id/textOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trạng thái đơn hàng: "
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"/>
+    <TextView
+        android:id="@+id/textPriceSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền thanh toán: "
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"/>
+
+</LinearLayout>

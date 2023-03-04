@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CustomerInfoFragment"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_12sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin khách hàng"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_12sdp"/>
+    <TextView
+        android:id="@+id/textCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên khách hàng: Nguyễn Văn A"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"/>
+    <TextView
+        android:id="@+id/textPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại: 0123456789"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"/>
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: email@gmail.com"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"/>
+    <TextView
+        android:id="@+id/textAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ nhận hàng: Hà Nội"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phương thức thanh toán: COD"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="@dimen/_7sdp"/>
+
+</LinearLayout>
