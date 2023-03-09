@@ -25,6 +25,7 @@ import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
 import com.example.pc_user.MainActivity;
 import com.example.pc_user.R;
+import com.example.pc_user.activities.EditPasswordActivity;
 import com.example.pc_user.functions.get_const.Const;
 import com.example.pc_user.functions.notification_dialog.ShowDialog;
 import com.firebase.ui.auth.AuthUI;
@@ -269,7 +270,7 @@ public class AccountFragment extends Fragment {
         btnUpdate = dialog.findViewById(R.id.btnUpdatePass);
 
         btnCancel.setOnClickListener(view -> dialog.cancel());
-        btnUpdate.setOnClickListener(view ->_handleUpdatePass(dialog));
+        btnUpdate.setOnClickListener(view ->_handleUpdatePass());
     }
 
     private void _setDefault(int flag) {
@@ -330,38 +331,8 @@ public class AccountFragment extends Fragment {
         }, 3000);
     }
 
-    private void _handleUpdatePass(Dialog dialog) {
-        progressDialog.show();
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String newPassword = "SOME-SECURE-PASSWORD";
-
-        assert user != null;
-        user.updatePassword(newPassword)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        Log.d("Update_pass", "User password updated.");
-                        new Handler()
-                                .postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        progressDialog.cancel();
-                                        dialog.cancel();
-                                        ShowDialog.handleShowDialog(getActivity(), Const.flagSuccessDialog, "Cập nhật thành công!");
-                                    }
-                                }, 3000);
-                    } else {
-                        Log.d("Update_pass", "User password updated fail.");
-                        new Handler()
-                                .postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        progressDialog.cancel();
-                                        dialog.cancel();
-                                        ShowDialog.handleShowDialog(getActivity(), Const.flagErrorDialog, "Cập nhật không thành công!");
-                                    }
-                                }, 3000);
-                    }
-                });
+    private void _handleUpdatePass() {
+        startActivity(new Intent(getActivity(), EditPasswordActivity.class));
     }
 
     private void _logOut() {
