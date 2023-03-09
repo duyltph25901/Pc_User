@@ -94,4 +94,27 @@ public class ValidateInput {
 
         return false;
     }
+
+    public static boolean isBreakingUpdatePass(Activity activity, boolean... var) {
+        boolean isNull = var[0];
+        boolean isPass = var[1];
+        boolean isConfirm = var[2];
+        boolean isTruePass = var[3];
+
+        if (isNull) {
+            ShowDialog.handleShowDialog(activity, Const.flagErrorDialog, "Vui lòng điền đầy đủ thông tin!");
+            return true;
+        } if (!isTruePass) {
+            ShowDialog.handleShowDialog(activity,Const.flagErrorDialog,  "Mật khẩu cũ không đúng!");
+            return true;
+        } if (!isPass) {
+            ShowDialog.handleShowDialog(activity,Const.flagErrorDialog, "Mật khẩu phải chứa ít nhất 6 kí tự!");
+            return true;
+        } if (!isConfirm) {
+            ShowDialog.handleShowDialog(activity,Const.flagErrorDialog, "Mật khẩu không trùng khớp!");
+            return true;
+        }
+
+        return false;
+    }
 }
