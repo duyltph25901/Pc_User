@@ -13,6 +13,9 @@
         android:theme="@style/FullScreen"
         tools:targetApi="31">
         <activity
+            android:name=".activities.EditPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.DetailsOrderActivity"
             android:exported="false">
             <meta-data
@@ -39,7 +42,6 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
         </activity>
         <activity
             android:name=".activities.LoginContainerActivity"
