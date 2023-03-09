@@ -241,7 +241,7 @@ public class AccountFragment extends Fragment {
             });
             btnUpdatePass.setOnClickListener(view -> {
                 dialog.cancel();
-                _showDialogUpdatePass();
+                startActivity(new Intent(getActivity(), EditPasswordActivity.class));
             });
         } else {
             btnNo.setOnClickListener(view -> dialog.cancel());

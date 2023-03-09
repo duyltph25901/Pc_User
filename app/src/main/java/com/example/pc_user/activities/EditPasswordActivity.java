@@ -87,6 +87,7 @@ public class EditPasswordActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             ShowDialog.handleShowDialog(EditPasswordActivity.this, Const.flagSuccessDialog, "Cập nhật mật khẩu thành công!");
                             Toast.makeText(EditPasswordActivity.this, "Hệ thống sẽ tự đăng xuất trong vòng 5s!", Toast.LENGTH_LONG).show();
+                            _enableButton();
                             new Handler()
                                     .postDelayed(() -> _handleLogOut(), 5000);
                         } else {
@@ -109,6 +110,11 @@ public class EditPasswordActivity extends AppCompatActivity {
             inputCurrentPass.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             textShowHidePass.setText("Hiện");
         }
+    }
+
+    private void _enableButton() {
+        imageX.setEnabled(false);
+        buttonUpdate.setEnabled(false);
     }
 
     private void _handleLogOut() {
